@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Nome: <input type="text" name="nome" id="name"><br>
+        Sobrenome: <input type="text" name="sobrenome" id="sobrenome"><br>
+        Email: <input type="email" name="email" id="email"><br>
+        <button onclick="Enviar()">Enviar</button>
+    </div>
+    <div>  
+        <h4 id="nome-output">Nome: </h4>
+        <h4 id="sobrenome-output">Sobrenome: </h4>
+        <h4 id="email-output">Email: </h4>
+    </div>
+    <script>
+        function Enviar(){
+            const nomeInput = document.getElementById('name').value
+            const sobrenomeInput = document.getElementById('sobrenome').value
+            const emailInput = document.getElementById('email').value
+
+            const nomeOutput = document.getElementById('nome-output')
+            const sobrenomeOutput = document.getElementById('sobrenome-output')
+            const emailOutput = document.getElementById('email-output')
+
+            TextOut(nomeInput, nomeOutput)
+            TextOut(sobrenomeInput, sobrenomeOutput)
+            TextOut(emailInput, emailOutput)
+
+        }
+        function TextOut(text , element){
+            element.innerText += ' ' + text
+        }
+    </script>
+</body>
+</html>
