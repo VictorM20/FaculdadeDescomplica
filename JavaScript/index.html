@@ -8,33 +8,26 @@
 </head>
 <body>
     <div>
-        Nome: <input type="text" name="nome" id="name"><br>
-        Sobrenome: <input type="text" name="sobrenome" id="sobrenome"><br>
-        Email: <input type="email" name="email" id="email"><br>
+        Valor 1: <input type="text" name="valor1" id="valor1"><br>
+        Valor 2: <input type="text" name="valor2" id="valor2"><br>
         <button onclick="Enviar()">Enviar</button>
     </div>
     <div>  
-        <h4 id="nome-output">Nome: </h4>
-        <h4 id="sobrenome-output">Sobrenome: </h4>
-        <h4 id="email-output">Email: </h4>
+        <h4 id="resultado-output"> </h4>
     </div>
     <script>
         function Enviar(){
-            const nomeInput = document.getElementById('name').value
-            const sobrenomeInput = document.getElementById('sobrenome').value
-            const emailInput = document.getElementById('email').value
+            const valor1 = Number(document.getElementById('valor1').value);
+            const valor2 = Number(document.getElementById('valor2').value);
 
-            const nomeOutput = document.getElementById('nome-output')
-            const sobrenomeOutput = document.getElementById('sobrenome-output')
-            const emailOutput = document.getElementById('email-output')
+            const resultado = valor1 + valor2
+            if(resultado > 10){
+                document.getElementById('resultado-output').innerHTML = "Valor acima de 10"
+            }
+            else{
+                document.getElementById('resultado-output').innerHTML = "Valor abaixo de 10"
+            } 
 
-            TextOut(nomeInput, nomeOutput)
-            TextOut(sobrenomeInput, sobrenomeOutput)
-            TextOut(emailInput, emailOutput)
-
-        }
-        function TextOut(text , element){
-            element.innerText += ' ' + text
         }
     </script>
 </body>
