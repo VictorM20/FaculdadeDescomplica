@@ -8,27 +8,13 @@
 </head>
 <body>
     <div>
-        Valor 1: <input type="text" name="valor1" id="valor1"><br>
-        Valor 2: <input type="text" name="valor2" id="valor2"><br>
+        Valor 1: <input type="number" name="valor1" id="valor1"><br>
+        Valor 2: <input type="number" name="valor2" id="valor2"><br>
         <button onclick="Enviar()">Enviar</button>
     </div>
     <div>  
         <h4 id="resultado-output"> </h4>
     </div>
-    <script>
-        function Enviar(){
-            const valor1 = Number(document.getElementById('valor1').value);
-            const valor2 = Number(document.getElementById('valor2').value);
-
-            const resultado = valor1 + valor2
-            if(resultado > 10){
-                document.getElementById('resultado-output').innerHTML = "Valor acima de 10"
-            }
-            else{
-                document.getElementById('resultado-output').innerHTML = "Valor abaixo de 10"
-            } 
-
-        }
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
