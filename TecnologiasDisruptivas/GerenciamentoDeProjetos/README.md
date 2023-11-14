@@ -2,7 +2,7 @@
 
 Tão importante quanto codificar, é garantir a segurança e disponibilidade de nossos códigos. A partir disso, você deverá baixar o projeto template, disponibilizado no link abaixo:
 
-https://github.com/FaculdadeDescomplica/pratica_integradora_tecnologias_disruptivas/tree/main/modulo10/template-materialui (Acesso em 28/09/2022)
+https://github.com/FaculdadeDescomplica/pratica_integradora_tecnologias_disruptivas/tree/main/modulo10/template-materialui
 
 ## Passo-a-passo para execução
 Após clonar o repositório, você precisará executá-lo localmente, testando todo o seu funcionamento. A seguir, você deverá:
