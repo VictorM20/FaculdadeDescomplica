@@ -41,6 +41,16 @@ public class ProjetoController {
 			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);		
 	}
 	
+	@GetMapping
+    public List<Projeto> findAll() {
+        return projetoService.findAll();
+    }
+
+    @GetMapping("/descricao/{descricao}")
+    public List<Projeto> findByDescricao(@PathVariable("descricao") String descricao) {
+        return projetoService.findByDescricao(descricao);
+    }
+	
 	@PostMapping
 	public ResponseEntity<Projeto> saveProjeto(@RequestBody Projeto projeto) {
 		return new ResponseEntity<>(projetoService.saveProjeto(projeto), HttpStatus.CREATED);

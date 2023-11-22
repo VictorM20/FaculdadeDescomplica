@@ -11,6 +11,10 @@ public class ProjetoService {
 	@Autowired
 	ProjetoRepository projetoRepository;
 	
+	public List<Projeto> findByDescricao(String descricao) {
+        return projetoRepository.findByDescricao(descricao);
+    }
+	
 	public List<Projeto> getAll(){
 		return projetoRepository.findAll();
 	}
@@ -46,5 +50,10 @@ public class ProjetoService {
 		}else {
 			return false;
 		}
+	}
+
+	public List<Projeto> findAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
